@@ -27,11 +27,16 @@ echo > filename.txt
 # Delete file
 del example.txt
 
+More [commands](https://www.uniaogeek.com.br/guia-de-comandos-cmd-terminal-do-windows/).
+
 ```
 
 ## Git Commands
 
 ```description
+
+# Remove all changes done
+git stash
 
 # Return lasts commits
 git reset --hard f414f31
@@ -82,6 +87,10 @@ git config --global user.email "email@email.com"
 
 # Set username that i will use on repository
 git config --global user.name "williamcamasil" 
+
+# Logout from your account in repository
+git config --global --unset user.email
+git config --global --unset user.name 
 
 # Start local folder
 git init
