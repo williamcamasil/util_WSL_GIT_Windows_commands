@@ -21,6 +21,9 @@ mkdir newfolder
 # Delete folder
 rmdir newfolder
 
+# Create a file
+echo > filename.txt
+
 # Delete file
 del example.txt
 
