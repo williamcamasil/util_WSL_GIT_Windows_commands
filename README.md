@@ -27,9 +27,11 @@ echo > filename.txt
 # Delete file
 del example.txt
 
-More [commands](https://www.uniaogeek.com.br/guia-de-comandos-cmd-terminal-do-windows/).
+# Open selected folder
+explorer .
 
 ```
+More [commands](https://www.uniaogeek.com.br/guia-de-comandos-cmd-terminal-do-windows/) in Windows Terminal
 
 ## Git Commands
 
