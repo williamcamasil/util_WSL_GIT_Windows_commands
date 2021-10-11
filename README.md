@@ -1,4 +1,57 @@
-# Git and Windows terminal Commands
+# WSL, Git and Windows terminal Commands
+
+## WSL Ubuntu Terminal Commands
+
+```description
+# Show paths in the folder 
+ls
+
+# Show all hidden files 
+ls -a
+
+# Show all folders and files hidden or not
+ls -la
+
+# Back to home
+cd
+
+# Open folder 
+explorer.exe .
+
+# Enable new side prompt WSL command
+alt + shift + t
+
+# Clear commands from prompt
+clear OR ctrl + l
+
+# Create a folder
+mkdir name_folder
+
+# Delete folder or file
+rm -r name_folder OR name_file
+
+# Force delete folder or file
+rm -rf name_folder OR name_file
+
+# Create a file (^ = ctrl ex: ^+O save file) OR Open to edit file
+nano name_file.txt
+
+# Create a file 
+touch name_file.txt
+
+# Reload WSL without close prompt
+source .extension_file
+
+# Access adm environment and force commands  
+sudo su
+
+# Open file .zshrc to make configurations and put alias (shortcuts)
+nano .zshrc
+
+# Rename folder and file
+mv Filename newFilename
+
+```
 
 ## Windows Terminal Commands
 
