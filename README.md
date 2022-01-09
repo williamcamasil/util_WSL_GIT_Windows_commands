@@ -153,4 +153,10 @@ git init
 # Create a Readme.md
 git add README.md
 
+# delete branch locally
+git branch -d localBranchName
+
+# delete branch remotely
+git push origin --delete remoteBranchName
+
 ```
