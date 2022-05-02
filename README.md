@@ -162,4 +162,7 @@ git push origin --delete remoteBranchName
 # useful command to bring only commits that you want to your branch
 git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
 
+# remove last commit
+git reset --soft HEAD~1
+
 ```
