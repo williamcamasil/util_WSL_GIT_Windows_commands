@@ -105,6 +105,14 @@ git status
 # Add all changes for finish steps
 git add .
 
+# Bring lasts commits done [bring 7 characters from hash]
+git hist
+
+# Show changes of last commit
+git show
+OR # Show more than last commit
+git show HASH1 HASH2 
+
 # Command that save the steps that were finished
 git commit -m "arquivo readme"
 
@@ -120,7 +128,7 @@ git pull 
 # Update branchs
 git fetch
 
-# Show the log history
+# Show the log history [bring all characters from hash]
 git log
 
 # Delete branch from repository
@@ -130,9 +138,20 @@ git push origin --delete feature/modalContract
 git checkout feature/chooseBranche
 
 # Create a new branch
-git checkout -b feature/exampleBranche                   
+git checkout -b feature/exampleBranch
+OR
+git checkout feature/exampleBranch
 
-# Ask merge to another branche
+# Create a new branch from another branch
+git checkout -c [master] [new-master]
+
+# Rename branch
+git branch -m [new-name]
+  OBS: 
+    - delete old branch with command: git push origin :old-name
+    - send new name branch with command: git push -u origin new-name
+    
+# Ask merge to another branch
 git merge feature/branche
   # after is necessary to ask push
   git push origin feature/branche
@@ -153,16 +172,27 @@ git init
 # Create a Readme.md
 git add README.md
 
-# delete branch locally
+# Delete branch locally
 git branch -d localBranchName
 
-# delete branch remotely
+# Delete branch remotely
 git push origin --delete remoteBranchName
 
-# useful command to bring only commits that you want to your branch
+# First push for the remotely branch
+git push --set-upstream origin [branch-name]
+OR
+git push -u origin [branch-name]
+
+# Useful command to bring only commits that you want to your branch
 git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
 
-# remove last commit
+# Remove last commit
 git reset --soft HEAD~1
+
+# List all branch (local and tracking)
+git branch -a
+
+# Show url remotely branch 
+git remote get-url origin
 
 ```
