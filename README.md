@@ -130,6 +130,8 @@ git fetch
 
 # Show the log history [bring all characters from hash]
 git log
+OR
+git log <branch>
 
 # Delete branch from repository
 git push origin --delete feature/modalContract
@@ -151,10 +153,13 @@ git branch -m [new-name]
     - delete old branch with command: git push origin :old-name
     - send new name branch with command: git push -u origin new-name
     
-# Ask merge to another branch
-git merge feature/branche
-  # after is necessary to ask push
-  git push origin feature/branche
+# MERGE feature/branch > master 
+(master) bringing changes from feature/branch to master (fast-foward)
+git merge feature/branch
+AND 
+git push to send changes for the repository
+
+
 
 # Set email that i will use on repository
 git config --global user.email "email@email.com"
