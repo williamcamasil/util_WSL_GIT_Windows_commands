@@ -90,8 +90,19 @@ More [commands](https://www.uniaogeek.com.br/guia-de-comandos-cmd-terminal-do-wi
 
 ```description
 
-# Remove all changes done
+# Save changes in stash, to use in another time 
 git stash
+
+# Get a list of stashs 
+git stash list
+
+# Get the last stash and bring the changes for the branch again
+git stash pop
+
+# Get other item from list of stash
+git stash apply stash@{1}
+
+--------------------------------------------------
 
 # Return lasts commits
 git reset --hard f414f31
@@ -152,14 +163,25 @@ git branch -m [new-name]
   OBS: 
     - delete old branch with command: git push origin :old-name
     - send new name branch with command: git push -u origin new-name
-    
+
+--------------------------------------------------
+
+# REBASE feature/branch > master
+(master) bringing changes from feature/branch to master
+git rebase feature/branch
+// REBASE is better than MERGE when we are commiting changes, when we need make PR it is better use MERGE
+
 # MERGE feature/branch > master 
 (master) bringing changes from feature/branch to master (fast-foward)
 git merge feature/branch
 AND 
 git push to send changes for the repository
 
+# Difference REBASE Reset and MERGE
+REBASE: used to have linear tree commits 
+MERGE: used to have have more trees commits in the same line
 
+--------------------------------------------------
 
 # Set email that i will use on repository
 git config --global user.email "email@email.com"
@@ -188,8 +210,14 @@ git push --set-upstream origin [branch-name]
 OR
 git push -u origin [branch-name]
 
+--------------------------------------------------
+
 # Useful command to bring only commits that you want to your branch
 git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
+OR
+git cherry-pick f13bd3
+
+--------------------------------------------------
 
 # Remove last commit
 git reset --soft HEAD~1
@@ -199,6 +227,8 @@ git branch -a
 
 # Show url remotely branch 
 git remote get-url origin
+
+--------------------------------------------------
 
 # Undoing changes files before git add . 
 git clean . -f
@@ -225,5 +255,10 @@ git checkout <hash>
 # Difference between Reset and Revert
 Revert: generate another commit to remove the last commit, where generate 2 commits and keep in the historic (It is not good)
 Reset: remove commit and clean this last commit from the historic (It is better)
+
+# Change name of commit or files
+git commit --amend -m "adding new file with content"
+
+
 
 ```
