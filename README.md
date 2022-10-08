@@ -90,6 +90,7 @@ More [commands](https://www.uniaogeek.com.br/guia-de-comandos-cmd-terminal-do-wi
 
 ```description
 
+[>>>VERY USEFUL<<<]
 # Save changes in stash, to use in another time 
 git stash
 
@@ -116,6 +117,7 @@ git status
 # Add all changes for finish steps
 git add .
 
+[>>>VERY USEFUL<<<]
 # Bring lasts commits done [bring 7 characters from hash]
 git hist
 
@@ -139,6 +141,7 @@ git pull 
 # Update branchs
 git fetch
 
+[>>>VERY USEFUL<<<]
 # Show the log history [bring all characters from hash]
 git log
 OR
@@ -165,7 +168,7 @@ git branch -m [new-name]
     - send new name branch with command: git push -u origin new-name
 
 --------------------------------------------------
-
+[>>>VERY USEFUL<<<]
 # REBASE feature/branch > master
 (master) bringing changes from feature/branch to master
 git rebase feature/branch
@@ -199,6 +202,7 @@ git init
 # Create a Readme.md
 git add README.md
 
+[>>>VERY USEFUL<<<]
 # Delete branch locally
 git branch -d localBranchName
 
@@ -211,14 +215,14 @@ OR
 git push -u origin [branch-name]
 
 --------------------------------------------------
-
+[>>>VERY USEFUL<<<]
 # Useful command to bring only commits that you want to your branch
 git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
 OR
 git cherry-pick f13bd3
 
 --------------------------------------------------
-
+[>>>VERY USEFUL<<<]
 # Remove last commit
 git reset --soft HEAD~1
 
@@ -229,7 +233,7 @@ git branch -a
 git remote get-url origin
 
 --------------------------------------------------
-
+[>>>VERY USEFUL<<<]
 # Undoing changes files before git add . 
 git clean . -f
 
@@ -259,6 +263,7 @@ Reset: remove commit and clean this last commit from the historic (It is better)
 # Change name of commit or files
 git commit --amend -m "adding new file with content"
 
-
+# Create git ignore
+https://www.toptal.com/developers/gitignore
 
 ```
