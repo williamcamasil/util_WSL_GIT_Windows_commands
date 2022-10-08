@@ -195,4 +195,30 @@ git branch -a
 # Show url remotely branch 
 git remote get-url origin
 
+# Undoing changes files before git add . 
+git clean . -f
+
+# Undoing stage files after git add .
+git restore --staged .
+
+# Undoing changes from commit after files been commited (REVERT)
+git revert HEAD --no-edit
+OR //if you wanna revert commit before the first (penultimate)
+git revert HEAD~1
+OR //antepenultimate
+git revert HEAD~2
+
+# Undoing changes from commit after been commited (RESET default is --mixed)
+git reset --soft head~1 // using --soft keep changes in stage
+git reset head~1 // using default --mixed keep changes before git add .
+git reset --hard head~1 // using --hard do not keep change in stage and before git add . (= desktop) descart every changes
+
+# Reflog - command used to recorver changes after use reset --hard
+git reflog // bring a list of changes with hashs, get the hash that you are searching and execute this command:
+git checkout <hash>
+
+# Difference between Reset and Revert
+Revert: generate another commit to remove the last commit, where generate 2 commits and keep in the historic (It is not good)
+Reset: remove commit and clean this last commit from the historic (It is better)
+
 ```
